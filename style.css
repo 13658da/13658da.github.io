@@ -1,0 +1,59 @@
+body {
+    overflow: hidden;
+}
+#background-for-clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6091cc ;
+}
+
+@keyframes cloudsmoving {
+    from {left: -5364px;}
+    to {left: 100%;}
+}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#clouds {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5464px;
+    animation-name: cloudsmoving, fadein;
+    animation-duration: 90s, 10s;
+    animation-iteration-count: infinite, 1;
+    animation-timing-function: linear, linear;
+}
+
+@keyframes earth {
+    0% {content:url("../4-default-frames/moving_0.png");}
+    25% {content:url("../4-default-frames/moving_1.png");}
+    50% {content:url("../4-default-frames/moving_2.png");}
+    75% {content:url("../4-default-frames/moving_3.png");}
+}
+
+#preload {
+    visibility: hidden;
+    animation-name: earth;
+    animation-duration: 100ms;
+    animation-iteration-count: 1;
+}
+#logo {
+    content:url("../4-default-frames/moving_0.png");
+    z-index: 20;
+    animation-name: earth, fadein;
+    animation-duration: 2s, 7s;
+    animation-iteration-count: infinite, 1;
+    animation-timing-function: linear, linear;
+}
