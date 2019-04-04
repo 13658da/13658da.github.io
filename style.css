@@ -37,10 +37,10 @@ body {
 }
 
 @keyframes earth {
-    0% {content:url("../4-default-frames/moving_0.png");}
-    25% {content:url("../4-default-frames/moving_1.png");}
-    50% {content:url("../4-default-frames/moving_2.png");}
-    75% {content:url("../4-default-frames/moving_3.png");}
+    0% {content:url("4-default-frames/moving_0.png");}
+    25% {content:url("4-default-frames/moving_1.png");}
+    50% {content:url("4-default-frames/moving_2.png");}
+    75% {content:url("4-default-frames/moving_3.png");}
 }
 
 #preload {
@@ -50,7 +50,7 @@ body {
     animation-iteration-count: 1;
 }
 #logo {
-    content:url("../4-default-frames/moving_0.png");
+    content:url("4-default-frames/moving_0.png");
     z-index: 20;
     animation-name: earth, fadein;
     animation-duration: 2s, 7s;
