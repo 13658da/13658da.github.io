@@ -1,5 +1,5 @@
-body {
-    overflow: hidden;
+#site-wrapper {
+    overflow: hidden !important;
 }
 
 body::after {
