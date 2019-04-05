@@ -1,6 +1,15 @@
 body {
     overflow: hidden;
 }
+
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url("4-default-frames/moving_0.png") url("4-default-frames/moving_1.png") url("4-default-frames/moving_2.png") url("4-default-frames/moving_3.png"); 
+}
 #background-for-clouds {
     position: absolute;
     top: 0;
@@ -10,7 +19,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6091cc ;
+    background-color: #6091cc;
+    overflow: hidden;
 }
 
 @keyframes cloudsmoving {
@@ -43,17 +53,11 @@ body {
     75% {content:url("4-default-frames/moving_3.png");}
 }
 
-#preload {
-    visibility: hidden;
-    animation-name: earth;
-    animation-duration: 100ms;
-    animation-iteration-count: 1;
-}
 #logo {
     content:url("4-default-frames/moving_0.png");
     z-index: 20;
     animation-name: earth, fadein;
-    animation-duration: 2s, 7s;
+    animation-duration: 2s, 5s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
 }
