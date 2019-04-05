@@ -58,7 +58,7 @@ body::after {
     z-index: 20;
     width: 65vh;
     animation-name: earth, fadein;
-    animation-duration: 2s, 5s;
+    animation-duration: 2s, 3s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
 }
