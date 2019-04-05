@@ -1,5 +1,5 @@
-#site-wrapper {
-    overflow: hidden !important;
+html, body, #site-wrapper {
+    overflow: hidden;
 }
 
 body::after {
@@ -56,6 +56,7 @@ body::after {
 #logo {
     content:url("4-default-frames/moving_0.png");
     z-index: 20;
+    width: 65vh;
     animation-name: earth, fadein;
     animation-duration: 2s, 5s;
     animation-iteration-count: infinite, 1;
