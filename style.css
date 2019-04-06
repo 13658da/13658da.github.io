@@ -10,6 +10,7 @@ body::after {
     z-index: -1;
     content: url("4-default-frames/moving_0.png") url("4-default-frames/moving_1.png") url("4-default-frames/moving_2.png") url("4-default-frames/moving_3.png"); 
 }
+
 #background-for-clouds {
     position: absolute;
     top: 0;
@@ -24,8 +25,8 @@ body::after {
 }
 
 @keyframes cloudsmoving {
-    from {left: -5364px;}
-    to {left: 100%;}
+    from {transform: translateX(-5464px);}
+    to {transform: translateX(100vw);}
 }
 
 @keyframes fadein {
@@ -34,6 +35,7 @@ body::after {
 }
 
 #clouds {
+    will-change: transform;
     position: absolute;
     z-index: 0;
     top: 0;
@@ -54,6 +56,7 @@ body::after {
 }
 
 #logo {
+    will-change: contents;
     content:url("4-default-frames/moving_0.png");
     z-index: 20;
     width: 65vh;
