@@ -67,13 +67,34 @@ body::after {
     75% {content:url("4-default-frames/moving_3.png");}
 }
 
+#logo-div {
+    z-index: 19;
+    width: 50vh;
+    height: calc((402/500)*50vh);
+}
 #logo {
     will-change: contents;
-    content:url("4-default-frames/moving_0.png");
+    content: url("4-default-frames/moving_0.png");
     z-index: 20;
-    width: 65vh;
+    width: 50vh;
     animation-name: earth, fadein;
     animation-duration: 2s, 3s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
+}
+
+#everland-sign {
+    position: relative;
+    top: calc(((402 / 500) * (50vh)) * (-1) + (305 / 402) * ((402 / 500) * 50vh));
+    left: 0;
+    opacity: 0;
+    content: url("assets/everland-sign.png");
+    z-index: 40;
+    width: 50vh;
+    animation-name: fadein;
+    animation-duration: 7s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
