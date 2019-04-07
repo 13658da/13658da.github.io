@@ -1,0 +1,15 @@
+#logo-div {
+    top: calc((100vh - ((402/500) * 45vh)) / 2);
+    left: calc((100vw - 45vh) / 2);
+    width: 45vh;
+}
+
+#logo {
+    width: 45vh;
+}
+
+#everland-sign {
+    top: calc(((402 / 500) * 45vh) * (-1) + (305 / 402) * ((402 / 500) * 45vh));
+    width: 45vh;
+}
+

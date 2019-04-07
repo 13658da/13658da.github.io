@@ -29,9 +29,6 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #6091cc;
     overflow: hidden;
 }
@@ -68,15 +65,17 @@ body::after {
 }
 
 #logo-div {
+    position: absolute;
+    top: calc((100vh - ((402/500) * 65vh)) / 2);
+    left: calc((100vw - 65vh) / 2);
     z-index: 19;
-    width: 50vh;
-    height: calc((402/500)*50vh);
+    width: 65vh;
 }
 #logo {
     will-change: contents;
     content: url("4-default-frames/moving_0.png");
     z-index: 20;
-    width: 50vh;
+    width: 65vh;
     animation-name: earth, fadein;
     animation-duration: 2s, 3s;
     animation-iteration-count: infinite, 1;
@@ -85,12 +84,12 @@ body::after {
 
 #everland-sign {
     position: relative;
-    top: calc(((402 / 500) * (50vh)) * (-1) + (305 / 402) * ((402 / 500) * 50vh));
+    top: calc(((402 / 500) * 65vh) * (-1) + (305 / 402) * ((402 / 500) * 65vh));
     left: 0;
     opacity: 0;
     content: url("assets/everland-sign.png");
     z-index: 40;
-    width: 50vh;
+    width: 65vh;
     animation-name: fadein;
     animation-duration: 7s;
     animation-delay: 5s;
