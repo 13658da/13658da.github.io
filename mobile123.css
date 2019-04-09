@@ -9,9 +9,10 @@
 }
 
 #everland-sign {
-    top: calc(((100vh - ((97 / 500) * 45vh)) / 2) + (((305 / 2) / 500) * 45vh));   
+    top: calc(((100vh - ((93 / 500) * 45vh)) / 2) + (((309 / 2) / 500) * 45vh));   
     left: calc((100vw - 45vh) / 2);
     width: 45vh;
+    height: calc((93 / 500) * 45vh);
 }
 
 #shamrock {
