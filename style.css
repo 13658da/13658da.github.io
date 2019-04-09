@@ -9,7 +9,7 @@ html, body, #site-wrapper {
 
 #site-wrapper {
     animation-name: mist;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-iteration-count: 1;
     animation-timing-function: ease;
 }
@@ -84,18 +84,24 @@ body::after {
 
 #everland-sign {
     position: absolute;
-    top: calc(((100vh - ((97 / 500) * 60vh)) / 2) + (((305 / 2) / 500) * 60vh));   
+    top: calc(((100vh - ((93 / 500) * 60vh)) / 2) + (((309 / 2) / 500) * 60vh));   
     left: calc((100vw - 60vh) / 2);
     opacity: 0;
-    content: url("assets/everland-sign.png");
-    z-index: 40;
+    background-image: url("assets/everland-sign.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: calc((40 / 500) * 60vh);
+    z-index: 60;
     width: 60vh;
+    height: calc((93 / 500) * 60vh);
     animation-name: fadein;
     animation-duration: 6s;
     animation-delay: 4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
+    overflow: hidden;
+    display: inline-block;
 }
 
 #shamrock {
@@ -115,4 +121,30 @@ body::after {
 
 #shamrock:hover {
     transform: rotate(15deg);
+}
+
+#everland-sign::after {
+    content: ""; 
+    position: absolute;
+    left: -200%;     
+    width: 200%;
+    height: 100%;
+    opacity: 0;
+    z-index: 51;
+    background: rgba(245, 234, 46, 0.13);
+    background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(245, 234, 46, 0.13) 77%,
+    rgba(245, 234, 46, 0.5) 92%,
+    rgba(245, 234, 46, 0.0) 100%
+    );
+}
+
+#everland-sign:hover::after {
+    opacity: 1;
+    left: -30%;
+    transition-property: left, opacity;
+    transition-duration: 2s, 0.15s;
+    transition-timing-function: ease;
 }
