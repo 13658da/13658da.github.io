@@ -21,15 +21,21 @@
     left: calc(((100vw - ((77 / 500) * 45vh)) / 2) + (((100 + (77 / 2))/ 500) * 45vh));
 }
 
-#left-leaf {
+#left-leaf-container {
     top: calc(((100vh - ((118 / 500) * 45vh)) / 2) + ((53 / 500) * 45vh));
     left: calc(((100vw - ((207 / 500) * 45vh)) / 2) - (((217 - (207 / 2)) / 500) * 45vh));
     width: calc((207 / 500) * 45vh);
 }
+#left-leaf {
+    width: calc((207 / 500) * 45vh);
+}
 
-#right-leaf {
+#right-leaf-container {
     top: calc(((100vh - ((118 / 500) * 45vh)) / 2) + ((53 / 500) * 45vh));
     left: calc(((100vw - ((208 / 500) * 45vh)) / 2) + (((218 - (208 / 2)) / 500) * 45vh));
+    width: calc((208 / 500) * 45vh);
+}
+#right-leaf {
     width: calc((208 / 500) * 45vh);
 }
 
