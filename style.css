@@ -148,3 +148,43 @@ body::after {
     transition-duration: 2.3s, 0.15s;
     transition-timing-function: ease;
 }
+
+@keyframes leftcomeup {
+    from {opacity: 0; transform: rotate(-30deg);}
+    to {opacity: 1; transform: rotate(0deg);}
+}
+#left-leaf {
+    position: absolute;
+    top: calc(((100vh - ((118 / 500) * 60vh)) / 2) + ((53 / 500) * 60vh));
+    left: calc(((100vw - ((207 / 500) * 60vh)) / 2) - (((217 - (207 / 2)) / 500) * 60vh));
+    width: calc((207 / 500) * 60vh);
+    z-index: 50;
+    content: url("assets/left-leaf.png");
+    opacity: 0;
+    transform-origin: right bottom;
+    animation-name: leftcomeup;
+    animation-duration: 5s;
+    animation-delay: 10s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rightcomeup {
+    from {opacity: 0; transform: rotate(30deg);}
+    to {opacity: 1; transform: rotate(0deg);}
+}
+#right-leaf {
+    position: absolute;
+    top: calc(((100vh - ((118 / 500) * 60vh)) / 2) + ((53 / 500) * 60vh));
+    left: calc(((100vw - ((208 / 500) * 60vh)) / 2) + (((218 - (208 / 2)) / 500) * 60vh));
+    width: calc((208 / 500) * 60vh);
+    z-index: 50;
+    content: url("assets/right-leaf.png");
+    opacity: 0;
+    transform-origin: left bottom;
+    animation-name: rightcomeup;
+    animation-duration: 5s;
+    animation-delay: 10s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
