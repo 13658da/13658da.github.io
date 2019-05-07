@@ -7,7 +7,8 @@ html, body, #site-wrapper {
     to {opacity: 1;}
 }
 
-#site-wrapper {
+#site-wrapper { 
+    animation-fill-mode: forwards;
     animation-name: mist;
     animation-duration: 7s;
     animation-iteration-count: 1;
@@ -73,7 +74,7 @@ body::after {
     content: url("4-default-frames/moving_0.png");
     width: 60vh;
     animation-name: earth, fadein;
-    animation-duration: 2s, 3s;
+    animation-duration: 1.7s, 3s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
 }
@@ -254,10 +255,10 @@ body::after {
     content: url("assets/atmsph.png");
     position: absolute;
     opacity: 0.4;
-    top: calc(((100vh - ((89 / 500) * 60vh)) / 2) - ((99.9 / 500) * 60vh));
+    top: calc(((100vh - ((101 / 500) * 60vh)) / 2) - ((105.5 / 500) * 60vh));
     left: calc(((100vw - ((126 / 500) * 60vh)) / 2) - ((81 / 500) * 60vh));
     width: calc((126 / 500) * 60vh);
-    height: calc((89 / 500) * 60vh);
+    height: calc((101 / 500) * 60vh);
     z-index: 41;
     animation: atmsphFade 30s ease-out;
     animation-fill-mode: forwards;
@@ -296,4 +297,104 @@ body::after {
         left: 100%;
     }
 }
+
+@keyframes cloud_hover {
+    0% {transform: translateY(0);}
+  
+    50% {transform: translateY(2px);}
+}
+
+@keyframes logo_right_cloud {
+    from {opacity: 0; left: calc((((100vw - ((212 / 500) * 60vh)) / 2) + ((128 / 500) * 60vh)) - 40vh);}
+    to {opacity: 1; left: calc(((100vw - ((212 / 500) * 60vh)) / 2) + ((128 / 500) * 60vh));}
+}
+
+#right-cloud {
+    position: absolute;
+    width: calc((212 / 500) * 60vh);
+    height: calc((74 / 500) * 60vh);
+    top: calc(((100vh - ((74 / 500) * 60vh)) / 2) - ((67 / 500) * 60vh));
+    opacity: 0;
+    z-index: 51;
+    background-image: url("assets/right-cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: logo_right_cloud, cloud_hover;
+    animation-duration: 14s, 2s;
+    animation-timing-function: linear, cubic-bezier(.36, .07, .19, .97);
+    animation-delay: 5s, 6s;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logo_left_cloud {
+    from {opacity: 0; left: calc((((100vw - ((203 / 500) * 60vh)) / 2) - ((148.5 / 500) * 60vh)) + 40vh);}
+    to {opacity: 1; left: calc(((100vw - ((203 / 500) * 60vh)) / 2) - ((148.5 / 500) * 60vh));}
+}
+
+#left-cloud {
+    position: absolute;
+    width: calc((203 / 500) * 60vh);
+    height: calc((77 / 500) * 60vh);
+    top: calc(((100vh - ((77 / 500) * 60vh)) / 2) - ((40.5 / 500) * 60vh));
+    opacity: 0;
+    z-index: 51;
+    background-image: url("assets/left-cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: logo_left_cloud, cloud_hover;
+    animation-duration: 14s, 2s;
+    animation-timing-function: linear, cubic-bezier(.36, .07, .19, .97);
+    animation-delay: 5s, 5s;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+}
+
+#switch, #circle {
+    height: 20px;
+    transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+    opacity: 0;
+    animation: fadein 4s linear 10s;
+    animation-fill-mode: forwards;
+}
+
+#switch {
+    width: 40px;
+    margin: 0 auto;
+    border: 2px solid #DA8508;
+    border-radius: 27px;
+    background: #DA8508;
+    position: absolute;
+    top: calc(((100vh + (402 / 500) * 60vh) / 2) + 15px);
+    left: calc(50vw - 20px);
+}
+
+#circle {
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 40%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+    background: #e9e5d5;
+}
+
+.switched {
+    border-color: #1C3958 !important;
+    background: #1C3958 !important;
+}
+
+.switched #circle {
+    margin-left: 55%;
+    background: #e9e5d5;
+}
+
+.night {
+    filter: grayscale(50%) brightness(50%);
+}
+
+/*#site-wrapper:has([id]) {
+    transition: filter 1s ease-in-out;
+}
+
 

@@ -7,15 +7,15 @@
     <title>Everland</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile123.css"/>
-</head>
-
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
 <body>
     <div id="site-wrapper">
-        <div id="background-for-clouds"> 
+        <div id="background-for-clouds"></div>
         <img id="logo">
         <img id="clouds" src="assets/clouds.png" alt="clouds on a blue background">
-        </div>
-        <div id="everland-sign"></div>
         <div id="left-leaf-container">
             <img id="left-leaf" class="leaf">
         </div>
@@ -25,7 +25,30 @@
         <img id="shamrock">
         <div id="sun"></div>
         <img id="atmsph">
+        <div id="right-cloud"></div>
+        <div id="left-cloud"></div> 
     </div>
+    <div id="everland-sign"></div>
+    <div id="switch">
+            <div id="circle"></div>
+    </div>
+
+    <script>
+        var item = $("#site-wrapper:has([id])"); 
+        $("#switch").click(function() {
+            item.children().toggleClass("night");
+            $("#switch").toggleClass("switched");
+            /*if ($("#site-wrapper:has([id])").children().hasClass("night")) {
+                $("#site-wrapper:has([id])").children().removeClass("night");
+                $("#switch").removeClass("switched");
+            }
+            else {
+                $("#site-wrapper:has([id])").children().addClass("night");
+                $("#switch").addClass("switched");
+            }
+            */
+        });
+    </script>
 </body>
 
 </html>
