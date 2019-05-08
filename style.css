@@ -7,7 +7,8 @@ html, body, #site-wrapper {
     to {opacity: 1;}
 }
 
-#site-wrapper { 
+#site-wrapper {
+    z-index: 1;
     animation-fill-mode: forwards;
     animation-name: mist;
     animation-duration: 7s;
@@ -32,6 +33,7 @@ body::after {
     height: 100%;
     background-color: #6091cc;
     overflow: hidden;
+    transition: filter 1s ease-in-out;
 }
 
 @keyframes cloudsmoving {
@@ -56,6 +58,7 @@ body::after {
     animation-duration: 90s, 10s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
+    transition: filter 1s ease-in-out;
 }
 
 @keyframes earth {
@@ -77,6 +80,7 @@ body::after {
     animation-duration: 1.7s, 3s;
     animation-iteration-count: infinite, 1;
     animation-timing-function: linear, linear;
+    transition: filter 2s ease-in-out;
 }
 
 #everland-sign {
@@ -108,7 +112,7 @@ body::after {
     left: calc(((100vw - ((77 / 500) * 60vh)) / 2) + (((100 + (77 / 2))/ 500) * 60vh));
     content: url("assets/shamrock-whole.png");
     z-index: 50;
-    transition: transform 2s;
+    transition: transform 2s, filter 1s ease-in-out;
     transform-origin: 15.584415584% 82.352941176%;
     animation-name: fadein;
     animation-duration: 3s;
@@ -163,6 +167,7 @@ body::after {
     animation-delay: 10s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    transition: filter 1s ease-in-out;
 }
 #left-leaf {
     width: calc((207 / 500) * 60vh);
@@ -186,6 +191,7 @@ body::after {
     animation-delay: 10s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+    transition: filter 1s ease-in-out;
 }
 #right-leaf {
     width: calc((208 / 500) * 60vh);
@@ -242,6 +248,7 @@ body::after {
     animation-fill-mode: forwards;
     overflow: hidden;
     display: inline-block;
+    transition: filter 1s ease-in-out;
 }
 
 @keyframes atmsphFade {
@@ -262,6 +269,7 @@ body::after {
     z-index: 41;
     animation: atmsphFade 30s ease-out;
     animation-fill-mode: forwards;
+    transition: filter 1s ease-in-out;
 }
 
 #sun::after {
@@ -325,6 +333,7 @@ body::after {
     animation-delay: 5s, 6s;
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards;
+    transition: filter 1s ease-in-out;
 }
 
 @keyframes logo_left_cloud {
@@ -348,6 +357,7 @@ body::after {
     animation-delay: 5s, 5s;
     animation-iteration-count: 1, infinite;
     animation-fill-mode: forwards;
+    transition: filter 1s ease-in-out;
 }
 
 #switch, #circle {
@@ -390,11 +400,7 @@ body::after {
 }
 
 .night {
-    filter: grayscale(50%) brightness(50%);
-}
-
-/*#site-wrapper:has([id]) {
-    transition: filter 1s ease-in-out;
+    filter: grayscale(70%) brightness(30%);
 }
 
 
